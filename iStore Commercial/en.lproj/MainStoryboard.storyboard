@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="11C74" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="PtX-6n-uJA">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDf-d4-aFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="h0x-9D-a0u" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V82-KW-tt4">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="smz-62-68a">
+                                <rect key="frame" x="20" y="85" width="984" height="643"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-997" y="-1742"/>
+        </scene>
+        <scene sceneID="4">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="9wc-Z6-pqJ">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Edit Store Map" width="116" id="wFD-Gv-U1O">
+                                        <connections>
+                                            <action selector="editMap:" destination="2" id="vRi-j7-VQV"/>
+                                            <segue destination="HjG-jA-kf9" kind="popover" identifier="blockPopover" popoverAnchorBarButtonItem="wFD-Gv-U1O" id="DOE-c8-rwE">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="531" style="plain" systemItem="fixedSpace" id="gKG-vo-SiD"/>
+                                    <barButtonItem title="Save the Map" id="Yju-e7-goI">
+                                        <connections>
+                                            <action selector="saveMap:" destination="2" id="DkE-ZV-o09"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="editMapButton" destination="wFD-Gv-U1O" id="w4j-O1-0lX"/>
+                        <outlet property="saveMapButton" destination="Yju-e7-goI" id="5Py-IL-wky"/>
+                        <outlet property="toolbar" destination="9wc-Z6-pqJ" id="9oJ-G7-8NI"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2080" y="-1060"/>
+        </scene>
+        <scene sceneID="rqc-yJ-rG4">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RNs-s4-9ST" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="blockViewID" id="715-g7-fuR" customClass="BlockInventoryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nom-tm-4qe">
+                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Block Name:" lineBreakMode="tailTruncation" minimumFontSize="10" id="kFj-yK-gLq">
+                                <rect key="frame" x="20" y="22" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="xz0-68-bVe">
+                                <rect key="frame" x="126" y="22" width="473" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lzb-XP-sEZ">
+                                <rect key="frame" x="20" y="65" width="984" height="623"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="715-g7-fuR" id="Paj-wA-Wsz"/>
+                                    <outlet property="delegate" destination="715-g7-fuR" id="E3B-jZ-rz1"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5B3-Wr-yAK">
+                                <rect key="frame" x="20" y="696" width="984" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissMyView:" destination="715-g7-fuR" eventType="touchUpInside" id="wU9-bR-Gxr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7cM-uQ-Gw3">
+                                <rect key="frame" x="607" y="21" width="186" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Change Block Name">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateName:" destination="715-g7-fuR" eventType="touchUpInside" id="Cn5-1Y-WgE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UfY-KY-Cs9">
+                                <rect key="frame" x="801" y="20" width="203" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Edit items in this block">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeEditing:" destination="715-g7-fuR" eventType="touchUpInside" id="cEi-yR-Oqi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="inventoryTableView" destination="lzb-XP-sEZ" id="cUO-Qk-or6"/>
+                        <outlet property="name" destination="xz0-68-bVe" id="d3i-0a-fdQ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2080" y="100"/>
+        </scene>
+        <scene sceneID="tLs-Ll-dph">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XlJ-qh-hqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="HjG-jA-kf9" customClass="SecondaryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZGV-8g-vrB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="121" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EXZ-4q-4xu">
+                                <rect key="frame" x="20" y="49" width="280" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add New Horizontal Block">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseDirection:" destination="HjG-jA-kf9" eventType="touchUpInside" id="zBi-H3-At7"/>
+                                    <segue destination="f6o-8G-zzH" kind="popover" identifier="horizontalPopover" popoverAnchorView="EXZ-4q-4xu" id="usL-pZ-nC5">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="122" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pYG-dK-cSu">
+                                <rect key="frame" x="20" y="139" width="280" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add New Vertical Block">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseDirection:" destination="HjG-jA-kf9" eventType="touchUpInside" id="PRo-ju-mQM"/>
+                                    <segue destination="f6o-8G-zzH" kind="popover" identifier="verticalPopover" popoverAnchorView="pYG-dK-cSu" id="HFu-9c-ISU">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="horizontal" destination="EXZ-4q-4xu" id="fdS-AE-Wcq"/>
+                        <outlet property="vertical" destination="pYG-dK-cSu" id="thG-xw-Fic"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-857" y="-868"/>
+        </scene>
+        <scene sceneID="una-lu-g80">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="txU-FY-eJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="f6o-8G-zzH" customClass="SecondaryViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wi5-DI-oWN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="123" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rBh-0n-Zm4">
+                                <rect key="frame" x="20" y="47" width="280" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Small">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseDirection:" destination="f6o-8G-zzH" eventType="touchUpInside" id="W0C-KP-O7D"/>
+                                    <action selector="chooseDirection:" destination="HjG-jA-kf9" eventType="touchUpInside" id="grM-hi-aa0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="124" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ABg-wO-2pK">
+                                <rect key="frame" x="20" y="136" width="280" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Medium">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseDirection:" destination="HjG-jA-kf9" eventType="touchUpInside" id="mmC-Uy-yUC"/>
+                                    <action selector="chooseDirection:" destination="f6o-8G-zzH" eventType="touchUpInside" id="s65-um-ggZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="125" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5MR-ut-Bf7">
+                                <rect key="frame" x="20" y="223" width="280" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Large">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseDirection:" destination="HjG-jA-kf9" eventType="touchUpInside" id="Dnm-vx-lMD"/>
+                                    <action selector="chooseDirection:" destination="f6o-8G-zzH" eventType="touchUpInside" id="JwQ-Nk-o7M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-405" y="-856"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="BlockInventoryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BlockInventoryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="dismissMyView:"/>
+                <relationship kind="action" name="updateName:"/>
+                <relationship kind="outlet" name="inventoryTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="name" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="SecondaryViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SecondaryViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="chooseDirection:"/>
+                <relationship kind="outlet" name="descriptor" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="horizontal" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="vertical" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="editInventory:"/>
+                <relationship kind="action" name="saveMap:"/>
+                <relationship kind="outlet" name="editInventoryButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="editMapButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="saveMapButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="toolbar" candidateClass="UIToolbar"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedOrientationMetrics key="orientation" orientation="landscapeRight"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="usL-pZ-nC5"/>
+    </inferredMetricsTieBreakers>
+</document>
